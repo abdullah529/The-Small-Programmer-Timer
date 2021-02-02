@@ -18,10 +18,8 @@ function getColor(){
     var getColor = document.getElementById("setColor").value;
     localStorage.setItem("Color",getColor);
     document.body.style.background = localStorage.getItem("Color");
-    document.getElementById("time").style.background = localStorage.getItem("Color");
 }
 function setColor(){
     document.getElementById("setColor").value = localStorage.getItem("Color");
     document.body.style.background = localStorage.getItem("Color");
-    document.getElementById("time").style.background = localStorage.getItem("Color");
 }
