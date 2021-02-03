@@ -6,7 +6,13 @@ if(localStorage.getItem("Color") != null){
 function updateDate(){
     var date = new Date();
     var setTime = document.getElementById("setTime");
-    setTime.innerText = parseInt(date.getHours()-12)+":"+date.getMinutes()+":"+date.getSeconds();
+    var Hours = date.getHours();
+    if(Hours<13){
+
+    }else{
+        Hours -= 12;
+    }
+    setTime.innerText = Hours+":"+date.getMinutes()+":"+date.getSeconds();
     var setDate = document.getElementById("setDate");
     setDate.innerText = date.getDay()+"-"+parseInt(date.getMonth()+1)+"-"+date.getFullYear();
 }
